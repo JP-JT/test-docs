@@ -1,0 +1,149 @@
+= AsciiDoc Milestones
+Jennifer Park
+January 06, 2024: AsciiDoc Milestones
+:icons: font
+:experimental:
+
+== Paragraphs
+// https://docs.asciidoctor.org/asciidoc/latest/blocks/paragraphs/
+Paragraphs don't require any special markup in AsciiDoc.
+A paragraph is just one or more lines of consecutive text.
+
+To begin a new paragraph, separate it by at least one empty line from the previous paragraph or block.
+
+
+== Lists: unordered, ordered, definition
+// https://docs.asciidoctor.org/asciidoc/latest/lists/description/
+.Grocery list
+* apples
+* bananas
+* citrus
+** oranges
+** tangerines
+
+.How to make coffee in a French press
+1. Grind coffee beans.
+2. Preheat the French press.
+3. Add coffee grounds.
+4. Bloom the coffee.
+5. Pour hot water.
+6. Steep for four minutes.
+7. Press down the plunger.
+8. Pour and enjoy!
+
+.Description list
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+
+
+== Sections
+// https://docs.asciidoctor.org/asciidoc/latest/sections/titles-and-levels/
+//= Document Title (Level 0)
+== Level 1 Section Title
+=== Level 2 Section Title
+==== Level 3 Section Title
+===== Level 4 Section Title
+====== Level 5 Section Title
+== Another Level 1 Section Title
+
+
+== Tables
+// https://docs.asciidoctor.org/asciidoc/latest/tables/build-a-basic-table/
+.Table title
+[cols="1,1"]
+|===
+|Cell in column 1, header row |Cell in column 2, header row
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+
+|Cell in column 1, row 3
+|Cell in column 2, row 3
+
+|Cell in column 1, row 4
+|Cell in column 2, row 4
+|===
+
+
+== Cross references
+// https://docs.asciidoctor.org/asciidoc/latest/macros/xref/
+The text at the end of this sentence is cross referenced to <<_lists_unordered_ordered_definition,the list section>>.
+
+
+== Source code blocks
+// https://docs.asciidoctor.org/asciidoc/latest/verbatim/source-blocks/
+[source,Python]
+----
+print('Hello, world!')
+----
+
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+    "Hello World!"
+end
+----
+
+
+== Admonitions
+// https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/
+WARNING: Wolpertingers are known to nest in server racks.
+
+[IMPORTANT]
+.Feeding the Werewolves
+====
+While werewolves are hardy community members, keep in mind the following dietary
+
+. They are allergic to cinnamon.
+. More than two glasses of orange juice in 24 hours makes them howl in harmony with alarms and sirencs.
+. Celery make them sad.
+====
+
+:tip-caption: 💡
+[TIP]
+It's possible to use Unicode glyphs as admonition icons.
+
+
+== Keyboard, button, and menu macros
+// https://docs.asciidoctor.org/asciidoc/latest/macros/keyboard-macro/
+// https://docs.asciidoctor.org/asciidoc/latest/macros/ui-macros/
+|===
+|Shortcut | Purpose
+
+|kbd:[F11]
+|Toggle fullscreen
+
+|kbd:[Ctrl+T]
+| Open a new tab
+
+|kbd:[Ctrl+Shift+N]
+|New incognito window
+
+|kbd:[\ ]
+|Used to escape characters
+
+|kbd:[Ctrl+\]]
+|Jump to keyword
+
+|kbd:[Ctrl + +]
+|Increase zoom
+|===
+
+Press the btn:[OK] button when you are finished.
+
+Select a file in the file navigator and click btn:[Open].
+
+To save the file, select menu:File[Save].
+
+Select menu:View[Zoom > Reset] to reset the zoom level to the default setting.
+
+
+== Includes
+//https://docs.asciidoctor.org/asciidoc/latest/directives/include/#include-processing
+include::README.adoc[]
